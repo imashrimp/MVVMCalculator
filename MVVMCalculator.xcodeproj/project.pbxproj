@@ -13,6 +13,11 @@
 		1755063A2AB1915F0022DD92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175506382AB1915F0022DD92 /* Main.storyboard */; };
 		1755063C2AB191600022DD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1755063B2AB191600022DD92 /* Assets.xcassets */; };
 		1755063F2AB191600022DD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1755063D2AB191600022DD92 /* LaunchScreen.storyboard */; };
+		175506482AB1919B0022DD92 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 175506472AB1919B0022DD92 /* SnapKit */; };
+		1755064B2AB191B70022DD92 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755064A2AB191B70022DD92 /* CalculatorViewController.swift */; };
+		1755064E2AB198B50022DD92 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1755064D2AB198B50022DD92 /* Observable.swift */; };
+		175506532AB19AC40022DD92 /* OperatorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175506522AB19AC40022DD92 /* OperatorEnum.swift */; };
+		175506562AB19CE90022DD92 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175506552AB19CE90022DD92 /* CalculatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,10 @@
 		1755063B2AB191600022DD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1755063E2AB191600022DD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175506402AB191600022DD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1755064A2AB191B70022DD92 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		1755064D2AB198B50022DD92 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		175506522AB19AC40022DD92 /* OperatorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorEnum.swift; sourceTree = "<group>"; };
+		175506552AB19CE90022DD92 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175506482AB1919B0022DD92 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +66,9 @@
 		175506312AB1915F0022DD92 /* MVVMCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				175506492AB191A80022DD92 /* View */,
+				175506542AB19CDB0022DD92 /* ViewModel */,
+				1755064C2AB198930022DD92 /* Uitility */,
 				175506322AB1915F0022DD92 /* AppDelegate.swift */,
 				175506342AB1915F0022DD92 /* SceneDelegate.swift */,
 				175506362AB1915F0022DD92 /* ViewController.swift */,
@@ -65,6 +78,31 @@
 				175506402AB191600022DD92 /* Info.plist */,
 			);
 			path = MVVMCalculator;
+			sourceTree = "<group>";
+		};
+		175506492AB191A80022DD92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1755064A2AB191B70022DD92 /* CalculatorViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1755064C2AB198930022DD92 /* Uitility */ = {
+			isa = PBXGroup;
+			children = (
+				1755064D2AB198B50022DD92 /* Observable.swift */,
+				175506522AB19AC40022DD92 /* OperatorEnum.swift */,
+			);
+			path = Uitility;
+			sourceTree = "<group>";
+		};
+		175506542AB19CDB0022DD92 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				175506552AB19CE90022DD92 /* CalculatorViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,9 @@
 			dependencies = (
 			);
 			name = MVVMCalculator;
+			packageProductDependencies = (
+				175506472AB1919B0022DD92 /* SnapKit */,
+			);
 			productName = MVVMCalculator;
 			productReference = 1755062F2AB1915F0022DD92 /* MVVMCalculator.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 175506262AB1915F0022DD92;
+			packageReferences = (
+				175506462AB1919B0022DD92 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 175506302AB1915F0022DD92 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +183,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				175506372AB1915F0022DD92 /* ViewController.swift in Sources */,
+				1755064E2AB198B50022DD92 /* Observable.swift in Sources */,
+				175506562AB19CE90022DD92 /* CalculatorViewModel.swift in Sources */,
+				175506532AB19AC40022DD92 /* OperatorEnum.swift in Sources */,
 				175506332AB1915F0022DD92 /* AppDelegate.swift in Sources */,
+				1755064B2AB191B70022DD92 /* CalculatorViewController.swift in Sources */,
 				175506352AB1915F0022DD92 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +340,6 @@
 				INFOPLIST_FILE = MVVMCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,9 +349,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonseok.MVVMCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +370,6 @@
 				INFOPLIST_FILE = MVVMCalculator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,9 +379,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeonseok.MVVMCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		175506462AB1919B0022DD92 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		175506472AB1919B0022DD92 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 175506462AB1919B0022DD92 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 175506272AB1915F0022DD92 /* Project object */;
 }
